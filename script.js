@@ -16,7 +16,10 @@ const table = document.querySelector('table');
 
 
 const totalSum = Array.from(document.getElementsByClassName('price'))
-  .map(x => Number(x.textContent))
+  .map(x => {
+	const matches = x.textContent.match(/\d+/g);
+  return matches ? Number(matches[matches.length - 1]) : 0;  
+  })
   .reduce((acc, curr) => {
     return acc + curr
   }, 0)
