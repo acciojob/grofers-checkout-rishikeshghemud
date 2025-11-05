@@ -16,7 +16,7 @@ const table = document.querySelector('table');
 
 
 const totalSum = Array.from(document.getElementsByClassName('price'))
-  .map(x => Number(x.innerHTML))
+  .map(x => Number(x.textContent))
   .reduce((acc, curr) => {
     return acc + curr
   }, 0)
