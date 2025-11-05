@@ -11,7 +11,7 @@ const getSum = () => {
   const table = document.querySelector('table');
 	
   const totalSum = Array.from(document.getElementsByClassName('price'))
-    .map(x => Number(x.textContent.replace(/[^\d]/g, '') || 0))
+    .map(x => Number(x.innerText.replace(/[^\d]/g, '') || 0))
     .reduce((acc, curr) => acc + curr, 0);
 
   totalAmount.innerHTML = `<b id="ans">${totalSum}</b>`;
