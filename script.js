@@ -22,7 +22,7 @@ const totalSum = Array.from(document.getElementsByClassName('price'))
   }, 0)
 ;
 
-totalAmount.innerHTML = `<b>${totalSum}</b>`;
+totalAmount.innerHTML = `<b id="ans">${totalSum}</b>`;
 
 table.appendChild(row)
   
